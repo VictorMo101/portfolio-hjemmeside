@@ -41,10 +41,12 @@ html {
 
     position: relative;
     margin: auto;
-    top: 200px;
+    top: 280px;
     bottom: 0;
     left: 0;
     right: 0;
+
+    scale: 1.1;
 
     animation:transform 20s ease-in-out infinite both alternate,
     movement_one 40s ease-in-out infinite both;
@@ -72,11 +74,7 @@ html {
 
 }
 
-.aboutWaveDown {
-    width: 100%;
-    transform: scale(1.01); /* Use transform instead of scale property */
 
-}
 
 .about_Me_Box {
     display: grid;
@@ -85,6 +83,12 @@ html {
 
 .my_Face {
     transform: scale(0.8);
+    position: relative;
+    margin: auto;
+    top: -40px;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .text_Box {
@@ -104,5 +108,9 @@ html {
     opacity: 0;
 }
 
+.aboutWaveDown {
+    width: 100%;
+    transform: scale(1.01); /* Use transform instead of scale property */
 
+}
 
