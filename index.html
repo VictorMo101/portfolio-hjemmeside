@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Victor Mortensen Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="js/app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+</head>
+<body>
+
+    <nav class="navigation_bar bg-[#E1785E90] grid h-14 w-full items-center grid-cols-12 fixed !z-4 ">
+        <ul class=" text-[#3F405C] flex gap-10 z-1 col-span-4 col-start-8 !font ">
+            <li><a href="#about_Me">About me</a></li>
+            <li><a href="">Experience</a></li>
+            <li><a href="">Projects</a></li>
+            <li><a href="">Contact me</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero_section h-196">
+        <div class="hero relative flex"></div>
+        
+         <div class="hero_blob justify-center flex flex-col items-center !z-1 " id="heroBlob">
+                <p class="hero_blob_welcome !font-medium text-5xl text-[#3F405C]">Welcome to</p>
+                <h1 class="hero_blob_name !font-bold text-[#3F405C] text-6xl  ">Victor Mortensen</h1>
+                <p class="hero_blob_mmd !font-medium text-3xl text-[#3F405C]">Multimedia Designer</p>
+            </div>
+
+            <div class="carousel flex transition-transform duration-700 ease-in-out !-mt-100 !-z-1" id="carousel">
+            <img src="img/dok1.jpg" class="hero_img " alt="Image 1">
+            <img src="img/dok1.jpg" class="hero_img " alt="Image 2">
+            <img src="img/dok1.jpg" class="hero_img " alt="Image 3">
+            </div>
+   
+        </div>
+    </section>
+
+    <section class="about_Me" id="about_Me">
+        <div>
+            <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full !-mt-18 relative !z-1" alt="">
+            <div class="about_Me_Box bg-[#3F405C] h-182 w-full !-mt-1">
+                
+                    <img src="img/myFace.png" alt="" class="my_Face" id="">
+                    <div class="text_Box bg-[#E1785E] !p-6" id="animatedText">
+                        <p class=" !font-bold text-[#3F405C] text-2xl" >
+                            Hi, my name is Victor and I am a 21-year-old male from Denmark, Esbjerg.<br><br>
+                            I am a multimedia designer based on my love and interest for content creation, frontend development, and video production.<br><br>
+                            Yadadadadada yad adadyad ayda ada yadaday adyady adya yadadayad a
+                        </p>
+                    </div>
+            </div>
+            <img src="img/WaveForWebDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
+        </div>
+    </section>
+
+    <section class="experience">
+
+    </section>
+
+</body>
+</html>
