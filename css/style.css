@@ -79,6 +79,9 @@ html {
 .about_Me_Box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1980px; /* Set a maximum width for the grid */
+    margin: auto; /* Center the grid horizontally */
+    width: 100%; /* Ensure it doesn't exceed the parent's width */
 }
 
 .my_Face {
