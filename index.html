@@ -13,14 +13,16 @@
 
     <nav class="navigation_bar bg-[#E1785E90] grid h-14 w-full items-center grid-cols-12 fixed !z-4 ">
         <ul class=" text-[#3F405C] flex gap-10 z-1 col-span-4 col-start-8 !font ">
+            <li><a href="#home">Home</a></li>
             <li><a href="#about_Me">About me</a></li>
-            <li><a href="">Experience</a></li>
-            <li><a href="">Projects</a></li>
-            <li><a href="">Contact me</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contactMe">Contact me</a></li>
         </ul>
     </nav>
 
-    <section class="hero_section h-196">
+    <section class="hero_section h-196" id="home">
         <div class="hero relative flex"></div>
         
          <div class="hero_blob justify-center flex flex-col items-center !z-1 " id="heroBlob">
@@ -38,9 +40,9 @@
         </div>
     </section>
 
-    <section class="about_Me" id="about_Me">
-            <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full !-mt-24 relative !z-1" alt="">
-            <div class="about_Me_Box bg-[#3F405C] h-190  !-mt-1">
+    <section class="about_Me" >
+            <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full !-mt-24 relative !z-1"  alt="">
+            <div class="about_Me_Box bg-[#3F405C] h-224  !-mt-1" id="about_Me">
                     <img src="img/myFace.png" alt="" class="my_Face" id="">
                     <div class="text_Box bg-[#E1785E] !p-6" id="animatedText">
                         <p class=" !font-bold text-[#3F405C] text-2xl" >
@@ -53,23 +55,25 @@
             <img src="img/WaveForWebDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
     </section>
 
-    <section class="experience">
-        <div class="experience_Box w-full h-234 bg-white ">
+    <section class="experience" id="experience">
+        <div class="experience_Box w-full h-254 bg-white ">
 
         </div>
     </section>
 
 
 
-    <section class="projects_Box">
-        <div class="projects_Box w-full h-234 bg-[#E1785E] ">
-
+    <section class="projects" >
+        <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full !-mt-24 relative !z-1" alt="">
+        <div class="projects_Box w-full h-234 bg-[#E1785E] " id="projects">
+            <div class="this"></div>
         </div>
+        <img src="img/WaveForWebDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
     </section>
 
 
 
-    <section class="gallery">
+    <section class="gallery" id="gallery">
         <div class="gallery_Box w-full h-234 bg-white ">
 
         </div>
@@ -79,7 +83,8 @@
 
 
     <section class="contact_Me">
-        <div class="contact_Me_Box w-full h-234 bg-[#3F405C] ">
+        <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full relative !z-1" alt="">
+        <div class="contact_Me_Box w-full h-234 bg-[#3F405C] !-mt-2 " id="contactMe">
 
         </div>
     </section>

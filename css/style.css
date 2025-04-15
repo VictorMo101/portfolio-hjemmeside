@@ -107,13 +107,8 @@ html {
     border-radius: 20px;
 }
 
-#animatedText {
-    opacity: 0;
-}
-
 .aboutWaveDown {
     width: 100%;
     transform: scale(1.01); /* Use transform instead of scale property */
 
 }
-

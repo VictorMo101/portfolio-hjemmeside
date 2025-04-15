@@ -1,47 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Smooth scroll for "About me" button
-    const aboutMeLink = document.querySelector('a[href="#aboutMe"]');
-    if (aboutMeLink) {
-        aboutMeLink.addEventListener("click", function (e) {
-            e.preventDefault(); // Prevent default anchor behavior
-            document.querySelector("#aboutMe").scrollIntoView({
-                behavior: "smooth", // Smooth scrolling
-                block: "start", // Align to the top of the section
-            });
-        });
-    }
-
-
-
-    // Animation for #animatedText
-    const animatedText = document.getElementById("animatedText");
-    if (animatedText) {
-        // Create an Intersection Observer
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Trigger Anime.js animation
-                        anime({
-                            targets: "#animatedText",
-                            opacity: [0, 1], // Fade in
-                            translateX: ["70%", "-50%"], // Slide in from the left
-                            duration: 800, // Animation duration in ms
-                            easing: "easeInQuad", // Easing function
-                        });
-
-                        // Stop observing after animation is triggered
-                        observer.unobserve(animatedText);
-                    }
+    const addSmoothScroll = (selector, targetId) => {
+        const link = document.querySelector(selector);
+        if (link) {
+            link.addEventListener("click", (e) => {
+                e.preventDefault();
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
                 });
-            },
-            { threshold: 0.5 } // Trigger when 50% of the element is visible
-        );
+            });
+        }
+    };
 
-        // Observe the target element
-        observer.observe(animatedText);
-    }
-
+    // Apply smooth scrolling to links
+    addSmoothScroll('a[href="#about_Me"]', "#about_Me");
+    addSmoothScroll('a[href="#experience"]', "#experience");
+    addSmoothScroll('a[href="#projects"]', "#projects");
+    addSmoothScroll('a[href="#gallery"]', "#gallery");
+    addSmoothScroll('a[href="#contactMe"]', "#contactMe");
+    addSmoothScroll('a[href="#home"]', "#home");
+    
 
 
     const heroBlob = document.getElementById("heroBlob");
@@ -67,16 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
                         observer.unobserve(heroBlob);
                     }
                 });
-            },
+            }
         );
 
         // Observe the target element
         observer.observe(heroBlob);
     }
 });
-
-
-
 
 // Initialize the current index of the slide to 0
 let currentIndex = 0;
@@ -109,3 +84,20 @@ setInterval(() => {
 }, 5000);
 
 
+
+    // Animation for #animatedText
+    const animatedText = document.getElementById("animatedText");
+    if (animatedText) {
+        new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: "#animatedText",
+                    opacity: [0, 1],
+                    translateX: ["70%", "-50%"],
+                    duration: 800,
+                    easing: "easeInQuad",
+                });
+                obs.unobserve(animatedText);
+            }
+        }, { threshold: 0.5 }).observe(animatedText);
+    }
