@@ -66,6 +66,10 @@ html {
     50%{transform:rotateY(10deg) ;}
 }
 
+#animatedText {
+    opacity: 0;
+}
+
 
 
 .aboutWaveUp {
