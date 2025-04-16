@@ -66,16 +66,20 @@ html {
     50%{transform:rotateY(10deg) ;}
 }
 
-#animatedText {
-    opacity: 0;
-}
 
 
 
 .aboutWaveUp {
     width: 100%;
     transform: scale(1.01); /* Use transform instead of scale property */
+    overflow: hidden;
+}
 
+
+.aboutWaveDown {
+    width: 100%;
+    transform: scale(1.01); 
+    overflow: hidden;
 }
 
 
@@ -83,9 +87,20 @@ html {
 .about_Me_Box {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1980px; /* Set a maximum width for the grid */
-    margin: auto; /* Center the grid horizontally */
-    width: 100%; /* Ensure it doesn't exceed the parent's width */
+    margin: auto; 
+    width: 100%; 
+}
+
+.about_Me_Box_Box {
+    max-width: 1980px; 
+    margin: 0 0 0 0;
+}
+
+.about_Me_Box h2 {
+    position: relative;
+    margin: auto;
+    top: 80px;
+    
 }
 
 .my_Face {
@@ -109,10 +124,36 @@ html {
     height: 350px;
     width: 700px;
     border-radius: 20px;
+
+    opacity: 0;
+    overflow: hidden;
 }
 
-.aboutWaveDown {
-    width: 100%;
-    transform: scale(1.01); /* Use transform instead of scale property */
 
+.experience_Box h2 {
+    position: relative;
+    bottom: 170px;
+}
+
+.experience_Box ul li {
+    width: 150px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    cursor:default;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.experience_Box ul li:hover {
+    transform: scale(1.1);
+}
+
+.experience_Box ul li img {
+    height: 88px;
+    width: 88px;
+}
+
+#experienceList {
+    opacity: 0;
 }

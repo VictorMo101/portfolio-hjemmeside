@@ -101,3 +101,21 @@ setInterval(() => {
             }
         }, { threshold: 0.5 }).observe(animatedText);
     }
+
+
+
+    const experienceList = document.getElementById("experienceList");
+    if (experienceList) {
+        new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: "#experienceList",
+                    opacity: [0, 1],
+                    duration: 600,
+                    easing: "easeInQuad",
+                });
+                obs.unobserve(experienceList);
+            }
+        }, { threshold: 0.5 }).observe(experienceList);
+    }
+
