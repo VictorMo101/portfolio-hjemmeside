@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <nav class="navigation_bar bg-[#E1785E90] grid h-14 w-full items-center grid-cols-12 fixed !z-4 ">
+    <nav class="navigation_Bar bg-[#E1785E90] grid h-14 w-full items-center grid-cols-12 fixed !z-4 ">
         <ul class=" text-[#3F405C] flex gap-10 z-1 col-span-4 col-start-8 !font ">
             <li><a href="#home">Home</a></li>
             <li><a href="#about_Me">About me</a></li>
@@ -60,9 +60,9 @@
     </section>
 
     <section class="experience" id="experience">
-        <div class="experience_Box w-full h-254 bg-white justify-center flex flex-col items-center ">
-            <h2 class="text-7xl !font-bold text-[#3F405C]">Experience</h2>
-            <ul class="flex text-center text-2xl gap-10" id="experienceList">
+        <div class="experience_Box w-full h-294 justify-center flex flex-col items-center bg-[url('img/flowerOne.jpg')] overflow-hidden !-mt-24 !-mb-24">
+            <h2 class="text-7xl !font-bold text-[#3F405C] ">Experience</h2>
+            <ul class="flex text-center text-2xl gap-10 font-bold" id="experienceList">
                 <li >
                     <img src="https://picsum.photos/200/300" alt="" >
                     <p>Adobe <br> Indesign</p>
@@ -89,7 +89,7 @@
                 </li>
             </ul>
 
-            <ul class="flex text-center text-2xl gap-10 !mt-20 " id="experienceList">
+            <ul class="flex text-center text-2xl gap-10 !mt-20 font-bold " id="experienceList">
                 <li >
                     <img src="https://picsum.photos/200/300" alt="" >
                     <p>HTML</p>
@@ -119,16 +119,40 @@
 
     <section class="projects" >
         <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full w-auto relative !z-1" alt="">
-        <div class="projects_Box w-full h-234 bg-[#E1785E] " id="projects">
-            <div class="this"></div>
+        <div class="projects_Box w-full h-234 bg-[#E1785E] justify-center flex flex-col items-center " id="projects">
+            <h2 class="text-7xl !font-bold text-[#3F405C]">Projects</h2>
+            <div class="projects_box_projects gap-10 flex justify-center items-center text-center relative ">
+                <div class="trash_Project font-bold text-2xl text-[#3F405C]">
+                    <a href="">
+                        <img class="rounded-lg" src="https://picsum.photos/200/300" alt="">
+                        <p class="!mt-4 ">Trash Project</p>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div id="popupBox" class="popupboxhidden fixed inset-0 flex items-center justify-center bg-[#3F405C99] z-50">
+                <div class="bg-white h-178 w-358 rounded text-center flex">
+                    <button id="closePopup" class="mt-4 !m-4 bg-[#000000] text-white rounded-lg h-10 w-20">Close</button>
+                    <p class="text-2xl font-bold !m-4">Trash Project</p>
+                    <p class="!m-4">This is the content of the box.</p>
+                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
+                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
+                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
+                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
+
+                </div>
+            </div>
+
         </div>
         <img src="img/WaveForWebDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
     </section>
 
 
 
-    <section class="gallery" id="gallery">
-        <div class="gallery_Box w-full h-234 bg-white ">
+    <section class="gallery " id="gallery">
+        <div class="gallery_Box w-full h-294 bg-[url('img/flowerOne.jpg')] overflow-hidden !-mt-24 !-mb-24 ">
 
         </div>
     </section>

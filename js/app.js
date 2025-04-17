@@ -119,3 +119,18 @@ setInterval(() => {
         }, { threshold: 0.5 }).observe(experienceList);
     }
 
+    
+        const popupBox = document.getElementById("popupBox");
+        const trashProjectLink = document.querySelector(".trash_Project a");
+        const closePopup = document.getElementById("closePopup");
+    
+        // Show the popup box when the link is clicked
+        trashProjectLink.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent the default link behavior
+            popupBox.classList.remove("popupboxhidden"); // Show the popup box
+        });
+    
+        // Hide the popup box when the close button is clicked
+        closePopup.addEventListener("click", () => {
+            popupBox.classList.add("popupboxhidden"); // Hide the popup box
+        });

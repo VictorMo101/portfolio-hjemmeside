@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;700&display=swap');
 
+:root {
+    --primary-one-color: #E1785E;
+    --primary-two-color: #3F405C;
+}
+
 body {
     font-family: 'Instrument Sans', sans-serif;
 }
@@ -93,7 +98,8 @@ html {
 
 .about_Me_Box_Box {
     max-width: 1980px; 
-    margin: 0 0 0 0;
+    margin: auto;
+    gap: 440px;
 }
 
 .about_Me_Box h2 {
@@ -142,6 +148,7 @@ html {
     align-items: center;
     cursor:default;
     transition: transform 0.3s ease-in-out;
+    color: var(--primary-two-color);
 
 }
 
@@ -156,4 +163,31 @@ html {
 
 #experienceList {
     opacity: 0;
+}
+
+.trash_Project {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    
+}
+
+.trash_Project:hover {
+    transform :scale(1.05);
+}
+
+.popupboxhidden {
+    display: none;
+}
+
+#closePopup {
+    cursor: pointer;
+}
+
+#closePopup:hover {
+    background-color: #555555;
+}
+
+.projects_Box h2 {
+    position: relative;
+    top: -140px;
 }
