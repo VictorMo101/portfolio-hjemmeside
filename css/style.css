@@ -76,14 +76,12 @@ html {
 
 .aboutWaveUp {
     width: 100%;
-    transform: scale(1.01); /* Use transform instead of scale property */
     overflow: hidden;
 }
 
 
 .aboutWaveDown {
     width: 100%;
-    transform: scale(1.01); 
     overflow: hidden;
 }
 
@@ -138,7 +136,7 @@ html {
 
 .experience_Box h2 {
     position: relative;
-    bottom: 170px;
+    bottom: 250px;
 }
 
 .experience_Box ul li {
@@ -166,14 +164,18 @@ html {
 }
 
 .trash_Project {
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     cursor: pointer;
-    
+}
+
+.trash_Project img {
+    border-radius: 20px;
 }
 
 .trash_Project:hover {
     transform :scale(1.05);
 }
+
 
 .popupboxhidden {
     display: none;
@@ -190,4 +192,30 @@ html {
 .projects_Box h2 {
     position: relative;
     top: -140px;
+}
+
+.gallery_Box h2 {
+    position: relative;
+    margin: auto;
+    top: 120px;
+    text-align: center;
+}
+
+.gallery_Pictures {
+    max-width: 1980px;
+    margin: auto;
+}
+
+.gallery_Pic img {
+    height: 200px;
+    width: 300px;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: grayscale(60%);
+}
+
+.gallery_Pic img:hover{
+    transform: scale(1.05);
+    filter: grayscale(0%);
 }

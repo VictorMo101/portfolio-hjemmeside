@@ -41,11 +41,11 @@
     </section>
 
     <section class="about_Me" >
-            <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full !-mt-24 relative !z-1"  alt="">
+            <img src="img/TrueBlueWaveUp.png" class="aboutWaveUp h-full !-mt-24 relative !z-1"  alt="">
             <div class="about_Me_Box bg-[#3F405C] h-224 !-mt-1" id="about_Me">
                 <h2 class="col-span-2 text-7xl !font-bold text-[#E1785E]">About Me</h2>
                 <div class="about_Me_Box_Box flex col-span-2">
-                    <img src="img/myFace.png" alt="" class="my_Face" id="">
+                    <img  src="img/myFace.png" alt="" class="my_Face" id="">
                     <div class="text_Box bg-[#E1785E] !p-6" id="animatedText">
                         <p class=" !font-bold text-[#3F405C] text-2xl" >
                             Hi, my name is Victor and I am a 21-year-old male from Denmark, Esbjerg.<br><br>
@@ -56,13 +56,16 @@
                 </div>
 
             </div>
-            <img src="img/WaveForWebDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
+            <img class="bg-[#E1785E]" src="img/TrueBlueWaveDown.png" class="aboutWaveDown object-cover !z-1" alt="">
     </section>
 
+    
+    <!--bg-[url('img/')] bg-contain bg-center !-mt-24 !-mb-24 <<<< add to put pic in the background -->
+
     <section class="experience" id="experience">
-        <div class="experience_Box w-full h-294 justify-center flex flex-col items-center bg-[url('img/flowerOne.jpg')] overflow-hidden !-mt-24 !-mb-24">
+        <div class="experience_Box bg-[#E1785E] w-full h-294 justify-center flex flex-col items-center ">
             <h2 class="text-7xl !font-bold text-[#3F405C] ">Experience</h2>
-            <ul class="flex text-center text-2xl gap-10 font-bold" id="experienceList">
+            <ul class=" flex text-center text-2xl gap-10 font-bold" id="experienceList">
                 <li >
                     <img src="https://picsum.photos/200/300" alt="" >
                     <p>Adobe <br> Indesign</p>
@@ -111,20 +114,20 @@
                     <p>Vue.js</p>
                 </li>
             </ul>
-
         </div>
+        <img class="bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" class="aboutWaveDown object-cover !z-1" alt="">
     </section>
 
 
 
     <section class="projects" >
-        <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full w-auto relative !z-1" alt="">
-        <div class="projects_Box w-full h-234 bg-[#E1785E] justify-center flex flex-col items-center " id="projects">
-            <h2 class="text-7xl !font-bold text-[#3F405C]">Projects</h2>
+        <div class="projects_Box w-full h-234 bg-[#3F405C] justify-center flex flex-col items-center " id="projects">
+            <h2 class="text-7xl !font-bold text-[#E1785E]">Projects</h2>
             <div class="projects_box_projects gap-10 flex justify-center items-center text-center relative ">
-                <div class="trash_Project font-bold text-2xl text-[#3F405C]">
+                <div class="trash_Project font-bold text-2xl text-[#E1785E]">
                     <a href="">
-                        <img class="rounded-lg" src="https://picsum.photos/200/300" alt="">
+                        <div class="trash_Projects_Opacity"></div>
+                        <img class="" src="https://picsum.photos/200/300" alt="">
                         <p class="!mt-4 ">Trash Project</p>
                     </a>
 
@@ -146,22 +149,54 @@
             </div>
 
         </div>
-        <img src="img/WaveForWebDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
+        <img class="bg-[#E1785E]" src="img/TrueBlueWaveDown.png" class="aboutWaveDown !-mt-1 object-cover !z-1" alt="">
     </section>
 
-
+    <!-- bg-[url('img/')] bg-contain bg-center <<<< add to put pic in the background -->
 
     <section class="gallery " id="gallery">
-        <div class="gallery_Box w-full h-294 bg-[url('img/flowerOne.jpg')] overflow-hidden !-mt-24 !-mb-24 ">
-
+        <div class="gallery_Box bg-[#E1785E] w-full h-294  ">
+            <h2 class="text-7xl !font-bold text-[#3F405C]">Gallery</h2>
+            <div class="gallery_Pictures flex flex-wrap gap-10 justify-center items-center relative top-70 ">
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+                <div class="gallery_Pic">
+                    <img src="https://picsum.photos/200/300" alt="">
+                </div>
+            </div>
         </div>
+        <img class="bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" class="aboutWaveDown object-cover !z-1" alt="">
     </section>
 
 
 
 
     <section class="contact_Me">
-        <img src="img/WaveForWebUp.png" class="aboutWaveUp h-full relative !z-1" alt="">
         <div class="contact_Me_Box w-full h-234 bg-[#3F405C] !-mt-2 " id="contactMe">
 
         </div>
