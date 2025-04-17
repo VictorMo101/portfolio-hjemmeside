@@ -20,6 +20,10 @@ html {
     box-sizing: border-box;
 }
 
+.navigation_Bar ul {
+    display: flex;
+    width: 200px; /* Increase the width of the ul */
+}
 
 .hero_section {
     position: relative;
