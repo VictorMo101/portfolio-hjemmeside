@@ -248,6 +248,10 @@ html {
     color: var(--primary-one-color);
 }
 
+#projectPics {
+    opacity: 0;
+}
+
 .project img {
     border-radius: 14px;
 }
@@ -332,6 +336,10 @@ html {
     font-size: 4rem;
     font-weight: bold;
     color: var(--primary-one-color);
+}
+
+#galleryPics {
+    opacity: 0;
 }
 
 .gallery_Box h2 {

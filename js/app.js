@@ -111,6 +111,7 @@ setInterval(() => {
                 anime({
                     targets: "#experienceList",
                     opacity: [0, 1],
+                    translateY: ["30%", "0"],
                     duration: 600,
                     easing: "easeInQuad",
                 });
@@ -134,3 +135,40 @@ setInterval(() => {
         closePopup.addEventListener("click", () => {
             popupBox.classList.add("popupboxhidden"); // Hide the popup box
         });
+
+
+
+
+        const projectPics = document.getElementById("projectPics");
+        if (projectPics) {
+            new IntersectionObserver(([entry], obs) => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: "#projectPics",
+                        opacity: [0, 1],
+                        translateY: ["30%", "0"],
+                        duration: 600,
+                        easing: "easeInQuad",
+                    });
+                    obs.unobserve(projectPics);
+                }
+            }, { threshold: 0.5 }).observe(projectPics);
+        }
+
+
+
+        const galleryPics = document.getElementById("galleryPics");
+        if (galleryPics) {
+            new IntersectionObserver(([entry], obs) => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: "#galleryPics",
+                        opacity: [0, 1],
+                        translateY: ["30%", "0"],
+                        duration: 600,
+                        easing: "easeInQuad",
+                    });
+                    obs.unobserve(galleryPics);
+                }
+            }, { threshold: 0.5 }).observe(galleryPics);
+        }
