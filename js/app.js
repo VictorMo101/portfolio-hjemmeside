@@ -104,6 +104,40 @@ setInterval(() => {
 
 
 
+
+   
+// used for when media query > 480px
+if (animatedText) {
+    const mediaQuery = window.matchMedia("(max-width: 480px)");
+
+    function handleAnimation() {
+        const translateXValue = mediaQuery.matches ? ["70%", "0%"] : ["70%", "-50%"];
+
+        new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: "#animatedText",
+                    opacity: [0, 1],
+                    translateX: translateXValue,
+                    duration: 800,
+                    easing: "easeInQuad",
+                });
+                obs.unobserve(animatedText);
+            }
+        }, { threshold: 0.5 }).observe(animatedText);
+    }
+
+    // Call the function initially
+    handleAnimation();
+
+    // Add a listener to handle screen size changes dynamically
+    mediaQuery.addEventListener("change", handleAnimation);
+}
+
+
+
+
+
     const experienceList = document.getElementById("experienceList");
     if (experienceList) {
         new IntersectionObserver(([entry], obs) => {

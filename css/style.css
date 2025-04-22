@@ -448,3 +448,123 @@ html {
 }
 
 
+@media (max-width: 480px) {
+
+
+    .navigation_Bar {
+        height: 10vw;
+        position: fixed;
+    }
+    .navigation_Bar ul {
+        gap: 3vw;
+    }
+    .navigation_Bar ul li a {
+        font-size: 3vw;
+    }
+    .linkedInLink {
+        font-size: 3vw;
+    }
+
+
+    .hero {
+        height: 100vh;
+    }
+    .hero_img {
+        height: 128vh;
+    }
+    .hero_Blob {
+        height: 200px;
+        width: 350px;
+    }
+
+    .hero_Blob_Welcome {
+        font-size: 1.5rem;
+    }
+    .hero_Blob_Name {
+        font-size: 2rem;
+    }
+    .hero_Blob_Mmd {
+        font-size: 1.5rem;
+    }
+
+    .waveUp {
+        margin-top: -2rem;
+    }
+
+    .about_Me_Box {
+        height: 1080px;
+    }
+
+    .about_Me_Box_Box {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .about_Me_Box_Box h2 {
+        font-size: 3rem;
+        margin: auto;
+    }
+
+    .my_Face {
+        transform: scale(0.5);
+        grid-column: 1;
+        margin: auto;
+    }
+
+    .text_Box {
+        grid-column: 1;
+        height: 100%;
+        width: 80%;
+        border-radius: 14px;
+        opacity: 0;
+        overflow: hidden;
+        margin: auto;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: -100px;
+        bottom: 0;
+
+    }
+
+    .text_Box p {
+        font-size: 1.2rem;
+    }
+
+    .experience_Box {
+        height: 1080px;
+    }
+
+    .experience_Box h2 {
+        top: -80px;
+    }
+
+    .experience_Box ul {
+        position: relative;
+        top: 60px;
+        gap: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .experience_Box ul li {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .gallery_Pic {
+        position: relative;
+        top: -40px;
+    }
+
+    .gallery_Pic img {
+        height: 150px;
+        width: 150px;
+        filter: grayscale(0%);
+    }
+    
+    .gallery_Pic img:hover{
+        transform: scale(1);
+    }
+
+}
