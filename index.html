@@ -11,8 +11,8 @@
 </head>
 <body>
 
-    <nav class="navigation_Bar bg-[#E1785E90] grid h-14 w-full items-center grid-cols-12 fixed !z-4 ">
-        <ul class=" text-[#3F405C] flex gap-10 z-1 col-span-4 col-start-8 !font ">
+    <nav class="navigation_Bar">
+        <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about_Me">About me</a></li>
             <li><a href="#experience">Experience</a></li>
@@ -22,31 +22,30 @@
         </ul>
     </nav>
 
-    <section class="hero_section h-196" id="home">
-        <div class="hero relative flex"></div>
-        
-         <div class="hero_blob justify-center flex flex-col items-center !z-1 " id="heroBlob">
-                <p class="hero_blob_welcome !font-medium text-5xl text-[#3F405C]">Welcome to</p>
-                <h1 class="hero_blob_name !font-bold text-[#3F405C] text-6xl  ">Victor Mortensen</h1>
-                <p class="hero_blob_mmd !font-medium text-3xl text-[#3F405C]">Multimedia Designer</p>
+    <section class="hero_Section" id="home">
+        <div class="hero">
+            <div class="hero_Blob justify-center flex flex-col items-center !z-1 " id="heroBlob">
+                <p class="hero_Blob_Welcome !font-medium text-5xl text-[#3F405C]">Welcome to</p>
+                <h1 class="hero_Blob_Name !font-bold text-[#3F405C] text-6xl  ">Victor Mortensen</h1>
+                <p class="hero_Blob_Mmd !font-medium text-3xl text-[#3F405C]">Multimedia Designer</p>
             </div>
 
-            <div class="carousel flex transition-transform duration-700 ease-in-out !-mt-100 !-z-1" id="carousel">
-            <img src="img/dok1.jpg" class="hero_img " alt="Image 1">
-            <img src="img/dok1.jpg" class="hero_img " alt="Image 2">
-            <img src="img/dok1.jpg" class="hero_img " alt="Image 3">
+            <div class="carousel " id="carousel">
+                <img src="img/dok1.jpg" class="hero_img " alt="Image 1">
+                <img src="img/dok1.jpg" class="hero_img " alt="Image 2">
+                <img src="img/dok1.jpg" class="hero_img " alt="Image 3">
             </div>
-   
         </div>
     </section>
 
     <section class="about_Me" >
-            <img class="waveUp h-full !-mt-24 relative !z-1" src="img/TrueBlueWaveUp.png"   alt="">
+            <img class="waveUp " src="img/TrueBlueWaveUp.png"   alt="">
             <div class="about_Me_Box bg-[#3F405C] h-224 !-mt-1" id="about_Me">
-                <h2 class="col-span-2 text-7xl !font-bold text-[#E1785E]">About Me</h2>
-                <div class="about_Me_Box_Box flex col-span-2">
+
+                <div class="about_Me_Box_Box ">
+                    <h2 class="">About Me</h2>  
                     <img  src="img/myFace.png" alt="" class="my_Face" id="">
-                    <div class="text_Box bg-[#E1785E] !p-6" id="animatedText">
+                    <div class="text_Box" id="animatedText">
                         <p class=" !font-bold text-[#3F405C] text-2xl" >
                             Hi, my name is Victor and I am a 21-year-old male from Denmark, Esbjerg.<br><br>
                             I am a multimedia designer based on my love and interest for content creation, frontend development, and video production.<br><br>
@@ -56,23 +55,21 @@
                 </div>
 
             </div>
-            <img class="waveDown object-cover !z-1 bg-[#E1785E]" src="img/TrueBlueWaveDown.png" alt="">
+            <img class="waveDown bg-[#E1785E]" src="img/TrueBlueWaveDown.png" alt="">
     </section>
 
     
     <!--bg-[url('img/')] bg-contain bg-center !-mt-24 !-mb-24 <<<< add to put pic in the background -->
 
-    <section class="experience" id="experience">
+    <section class="experience bg-[#E1785E]" id="experience">
         <div class="experience_Box bg-[#E1785E] w-full h-294 justify-center flex flex-col items-center ">
             <h2 class="text-7xl !font-bold text-[#3F405C] ">Experience</h2>
-            <ul class=" flex text-center text-2xl gap-10 font-bold" id="experienceList">
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Adobe <br> Indesign</p>
+            <ul class=" flex flex-wrap text-center text-2xl gap-10 font-bold items-center justify-center" id="experienceList">
+                <li ><img src="https://picsum.photos/200/300" alt=""><p>Adobe <br> Indesign</p>
                 </li>
                 <li >
                     <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Adobe <br> Photoshop</p classs=" ">
+                    <p>Adobe <br> Photoshop</p>
                 </li>
                 <li >
                     <img src="https://picsum.photos/200/300" alt="" >
@@ -90,9 +87,6 @@
                     <img src="https://picsum.photos/200/300" alt="" >
                     <p>Figma</p>
                 </li>
-            </ul>
-
-            <ul class="flex text-center text-2xl gap-10 !mt-20 font-bold " id="experienceList">
                 <li >
                     <img src="https://picsum.photos/200/300" alt="" >
                     <p>HTML</p>
@@ -115,7 +109,7 @@
                 </li>
             </ul>
         </div>
-        <img class="waveDown object-cover !z-1 bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" alt="">
+        <img class="waveDown bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" alt="">
     </section>
 
 
@@ -123,20 +117,18 @@
     <section class="projects" >
         <div class="projects_Box w-full h-234 bg-[#3F405C] justify-center flex flex-col items-center " id="projects">
             <h2 class="text-7xl !font-bold text-[#E1785E]">Projects</h2>
-            <div class="projects_box_projects gap-10 flex justify-center items-center text-center relative ">
-                <div class="trash_Project font-bold text-2xl text-[#E1785E]">
+            <div class="projects_box_projects gap-10 flex flex-wrap justify-center items-center text-center relative">
+                <div class="project font-bold text-2xl text-[#E1785E]">
                     <a href="">
-                        <div class="trash_Projects_Opacity"></div>
+                        <div class="Projects_Opacity"></div>
                         <img class="" src="https://picsum.photos/200/300" alt="">
                         <p class="!mt-4 ">Trash Project</p>
                     </a>
-
                 </div>
-
             </div>
 
             <div id="popupBox" class="popupboxhidden fixed inset-0 flex items-center justify-center bg-[#3F405C99] z-50">
-                <div class="bg-white h-178 w-358 rounded text-center flex">
+                <div class="bg-white h-full w-full !m-24 rounded text-center flex">
                     <button id="closePopup" class="mt-4 !m-4 bg-[#000000] text-white rounded-lg h-10 w-20">Close</button>
                     <p class="text-2xl font-bold !m-4">Trash Project</p>
                     <p class="!m-4">This is the content of the box.</p>
@@ -149,7 +141,7 @@
             </div>
 
         </div>
-        <img class="waveDown !-mt-1 object-cover !z-1 bg-[#E1785E]" src="img/TrueBlueWaveDown.png" alt="">
+        <img class="waveDown bg-[#E1785E]" src="img/TrueBlueWaveDown.png" alt="">
     </section>
 
     <!-- bg-[url('img/')] bg-contain bg-center <<<< add to put pic in the background -->
@@ -158,9 +150,9 @@
         <div class="gallery_Box bg-[#E1785E] w-full h-294  ">
             <h2 class="text-7xl !font-bold text-[#3F405C]">Gallery</h2>
             <div class="gallery_Pictures flex flex-wrap gap-10 justify-center items-center relative top-70 ">
-                <div class="gallery_Pic">
-                    <img src="https://picsum.photos/200/300" alt="">
-                </div>
+                <div class="gallery_Pic"><img src="https://picsum.photos/200/300" alt=""></div>
+
+
                 <div class="gallery_Pic">
                     <img src="https://picsum.photos/200/300" alt="">
                 </div>
@@ -184,7 +176,7 @@
                 </div>
             </div>
         </div>
-        <img class="waveDown object-cover !z-1 bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" alt="">
+        <img class="waveDown bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" alt="">
     </section>
 
 

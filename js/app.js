@@ -121,11 +121,11 @@ setInterval(() => {
 
     
         const popupBox = document.getElementById("popupBox");
-        const trashProjectLink = document.querySelector(".trash_Project a");
+        const ProjectLink = document.querySelector(".project a");
         const closePopup = document.getElementById("closePopup");
     
         // Show the popup box when the link is clicked
-        trashProjectLink.addEventListener("click", (e) => {
+        ProjectLink.addEventListener("click", (e) => {
             e.preventDefault(); // Prevent the default link behavior
             popupBox.classList.remove("popupboxhidden"); // Show the popup box
         });
