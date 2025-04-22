@@ -117,7 +117,7 @@ html {
     overflow: hidden;
 
     height: 100%;
-    margin-top: -6rem;
+    margin-top: -6.5rem;
     position: relative;
     z-index: 1;
 }
@@ -446,3 +446,5 @@ html {
 .contact_Me_Box i {
     font-size: 36px;
 }
+
+
