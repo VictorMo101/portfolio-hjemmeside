@@ -23,7 +23,7 @@ html {
 .navigation_Bar {
     background-color: #E1785E90;
     display: grid;
-    height: 3.5rem;
+    height: 3vw;
     width: 100%;
     align-items: center;
     grid-template-columns: repeat(12, 1fr);
@@ -37,10 +37,24 @@ html {
     white-space: nowrap; /* Prevent text from wrapping */
 
     color: var(--primary-two-color);
-    gap: 2.5rem;
+    gap: 2.5vw;
     z-index: 1;
     grid-column: span 4 / span 4;
     grid-column-start: 2;
+}
+
+.navigation_Bar ul li a {
+    font-size: 1vw;
+}
+
+.linkedInLink {
+    grid-column: 12;
+    font-size: 1.5vw;
+    color: var(--primary-two-color);
+}
+
+.linkedInLink:hover {
+    color: #3F405C90;
 }
 
 
