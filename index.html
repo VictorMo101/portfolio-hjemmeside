@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Victor Mortensen Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/app.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
@@ -40,13 +41,12 @@
 
     <section class="about_Me" >
             <img class="waveUp " src="img/TrueBlueWaveUp.png"   alt="">
-            <div class="about_Me_Box bg-[#3F405C] h-224 !-mt-1" id="about_Me">
-
+            <div class="about_Me_Box" id="about_Me">
                 <div class="about_Me_Box_Box ">
                     <h2 class="">About Me</h2>  
                     <img  src="img/myFace.png" alt="" class="my_Face" id="">
                     <div class="text_Box" id="animatedText">
-                        <p class=" !font-bold text-[#3F405C] text-2xl" >
+                        <p class="!font-bold text-[#3F405C] text-2xl" >
                             Hi, my name is Victor and I am a 21-year-old male from Denmark, Esbjerg.<br><br>
                             I am a multimedia designer based on my love and interest for content creation, frontend development, and video production.<br><br>
                             Yadadadadada yad adadyad ayda ada yadaday adyady adya yadadayad a
@@ -62,52 +62,55 @@
     <!--bg-[url('img/')] bg-contain bg-center !-mt-24 !-mb-24 <<<< add to put pic in the background -->
 
     <section class="experience bg-[#E1785E]" id="experience">
-        <div class="experience_Box bg-[#E1785E] w-full h-294 justify-center flex flex-col items-center ">
-            <h2 class="text-7xl !font-bold text-[#3F405C] ">Experience</h2>
-            <ul class=" flex flex-wrap text-center text-2xl gap-10 font-bold items-center justify-center" id="experienceList">
-                <li ><img src="https://picsum.photos/200/300" alt=""><p>Adobe <br> Indesign</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Adobe <br> Photoshop</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Adobe <br> After Effects</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Adobe <br> Illustrator</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Adobe <br> Premier Pro</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Figma</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>HTML</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>CSS</p>
-                </li>
-                <li>
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>JavaScript</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Wordpress</p>
-                </li>
-                <li >
-                    <img src="https://picsum.photos/200/300" alt="" >
-                    <p>Vue.js</p>
-                </li>
-            </ul>
+
+        <div class="experience_Box">
+            <h2>Experience</h2>
+            <div>
+                <ul id="experienceList">
+                    <li ><img src="https://picsum.photos/200/300" alt=""><p>Adobe Indesign</p></li>
+
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Adobe Photoshop</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Adobe After Effects</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Adobe Illustrator</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Adobe Premier Pro</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Figma</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>HTML</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>CSS</p>
+                    </li>
+                    <li>
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>JavaScript</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Wordpress</p>
+                    </li>
+                    <li >
+                        <img src="https://picsum.photos/200/300" alt="" >
+                        <p>Vue.js</p>
+                    </li>
+                </ul>
+            </div>
         </div>
         <img class="waveDown bg-[#3F405C]" src="img/TrueOrangeWaveDown.png" alt="">
     </section>
@@ -115,11 +118,11 @@
 
 
     <section class="projects" >
-        <div class="projects_Box w-full h-234 bg-[#3F405C] justify-center flex flex-col items-center " id="projects">
-            <h2 class="text-7xl !font-bold text-[#E1785E]">Projects</h2>
+        <div class="projects_Box" id="projects">
+            <h2>Projects</h2>
             <div class="projects_box_projects gap-10 flex flex-wrap justify-center items-center text-center relative">
-                <div class="project font-bold text-2xl text-[#E1785E]">
-                    <a href="">
+                <div class="project">
+                    <a>
                         <div class="Projects_Opacity"></div>
                         <img class="" src="https://picsum.photos/200/300" alt="">
                         <p class="!mt-4 ">Trash Project</p>
@@ -128,14 +131,22 @@
             </div>
 
             <div id="popupBox" class="popupboxhidden fixed inset-0 flex items-center justify-center bg-[#3F405C99] z-50">
-                <div class="bg-white h-full w-full !m-24 rounded text-center flex">
-                    <button id="closePopup" class="mt-4 !m-4 bg-[#000000] text-white rounded-lg h-10 w-20">Close</button>
-                    <p class="text-2xl font-bold !m-4">Trash Project</p>
-                    <p class="!m-4">This is the content of the box.</p>
-                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
-                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
-                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
-                    <img class="h-24 w-24" src="https://picsum.photos/200/300" alt="">
+                <div class="popupBox_Box ">
+                    <div class="popupBox_Text_Button">
+                        <button id="closePopup" class="">Close</button>
+                        <h3 class="text-2xl font-bold">Trash Project</h3>
+                        <p>This is the content of the box.</p>
+                    </div>
+
+                    <div class="popupBox_Images">
+                        <img class="" src="https://picsum.photos/200/300" alt="">
+                        <img class="" src="https://picsum.photos/200/300" alt="">
+                        <img class="" src="https://picsum.photos/200/300" alt="">
+                        <img class="" src="https://picsum.photos/200/300" alt="">
+                        <img class="" src="https://picsum.photos/200/300" alt="">
+                        <img class="" src="https://picsum.photos/200/300" alt="">
+                    </div>
+
 
                 </div>
             </div>
@@ -148,8 +159,8 @@
 
     <section class="gallery " id="gallery">
         <div class="gallery_Box bg-[#E1785E] w-full h-294  ">
-            <h2 class="text-7xl !font-bold text-[#3F405C]">Gallery</h2>
-            <div class="gallery_Pictures flex flex-wrap gap-10 justify-center items-center relative top-70 ">
+            <h2>Gallery</h2>
+            <div class="gallery_Pictures">
                 <div class="gallery_Pic"><img src="https://picsum.photos/200/300" alt=""></div>
 
 
@@ -182,10 +193,29 @@
 
 
 
-    <section class="contact_Me">
-        <div class="contact_Me_Box w-full h-234 bg-[#3F405C] !-mt-2 " id="contactMe">
-
+    <section class="contact_Me bg-[#3F405C]">
+        <div class="contact_Me_Text">
+            <h2>Contact Me</h2>
+            <p class="!mt-4">If you have any questions or would like to get in touch, feel free to reach out!</p>
+            <div class="contact_Me_Box" id="contactMe">
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3>Location:</h3>
+                    <p class="!mt-4">Esbjerg</p>
+                </div>
+                <div class="border-l-[2px] border-l-[#E1785E]">
+                    <i class="fa-solid fa-phone"></i>
+                    <h3>Mobile:</h3>
+                    <p class="!mt-4">+45 42 95 56 00</p>
+                </div>
+                <div class="border-l-[2px] border-l-[#E1785E]">
+                    <i class="fa-solid fa-envelope"></i> 
+                    <h3>Mail:</h3>
+                    <p class="!mt-4">Vicmor01@easv365.dk</p>
+                </div>
+            </div>
         </div>
+
     </section>
 
 </body>

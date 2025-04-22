@@ -36,7 +36,7 @@ html {
     width: 100%;
     white-space: nowrap; /* Prevent text from wrapping */
 
-    color: #3F405C;
+    color: var(--primary-two-color);
     gap: 2.5rem;
     z-index: 1;
     grid-column: span 4 / span 4;
@@ -70,7 +70,7 @@ html {
 .hero_Blob {
     height: 400px;
     width: 700px;
-    background-color: #E1785E;
+    background-color: var(--primary-one-color);
     margin: auto;
     position: relative;
     top: 25%;
@@ -122,6 +122,10 @@ html {
 .about_Me_Box {
     margin: auto; 
     width: 100%; 
+
+    background-color: var(--primary-two-color);
+    height: 56rem;
+    margin-top: -0.25rem;
 }
 
 .about_Me_Box_Box {
@@ -136,12 +140,12 @@ html {
 .about_Me_Box_Box h2 {
     margin: auto;
     position: relative;
-    top: 180px;
+    top: 80px;
 
     grid-column: span 2 / span 2;
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: bold;
-    color: #E1785E;
+    color: var(--primary-one-color);
 }
 
 .my_Face {
@@ -164,24 +168,48 @@ html {
 
     height: 350px;
     width: 700px;
-    border-radius: 20px;
+    border-radius: 14px;
 
     opacity: 0;
     overflow: hidden;
-    background-color: #E1785E;
+    background-color: var(--primary-one-color);
     padding: 1.5rem;
 }
 
 
 .experience_Box {
-    width:auto;
     max-width: 1200px;
+    width: 100%;
+    height: 56rem;
+
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
 }
 
 .experience_Box h2 {
     position: relative;
-    bottom: 250px;
+    top: -140px;
+
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-two-color);
+}
+
+.experience_Box ul {
+    
+    align-items: flex-start; /* Align all items at the top */
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.5rem;
+    gap: 2.5rem;
+    font-weight: bold;
+    justify-content: center;
 }
 
 .experience_Box ul li {
@@ -190,16 +218,13 @@ html {
     flex-direction: column;
     align-items: center;
 
+    
     cursor:default;
     transition: transform 0.3s ease-in-out;
     color: var(--primary-two-color);
+    
 
 }
-
-.experience_Box ul {
-    align-items: flex-start; /* Align all items at the top */
-}
-
 
 .experience_Box ul li:hover {
     transform: scale(1.1);
@@ -208,6 +233,7 @@ html {
 .experience_Box ul li img {
     height: 88px;
     width: 88px;
+    border-radius: 14px;
 }
 
 #experienceList {
@@ -217,10 +243,13 @@ html {
 .project {
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: var(--primary-one-color);
 }
 
 .project img {
-    border-radius: 20px;
+    border-radius: 14px;
 }
 
 .project:hover {
@@ -232,17 +261,77 @@ html {
     display: none;
 }
 
+.popupBox_Box {
+    background-color: var(--primary-one-color);
+    height: 90%;
+    width: 90%;
+    border-radius: 14px;
+    display: flex;
+}
+
+.popupBox_Box p, h3 {
+    margin: 1rem;
+    color: var(--primary-two-color);
+}
+
+.popupBox_Text_Button {
+    width: 30%;
+}
+
+.popupBox_Images {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 20px;
+    margin: 1rem;
+}
+
+.popupBox_Images img {
+    margin: 20px;
+    position: relative;
+    height: 22rem;
+    width: 16rem;
+    object-fit: cover;
+    border-radius: 14px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.popupBox_Images img:hover {
+    transform: scale(1.05);
+}
+
 #closePopup {
+    margin: 1rem;
     cursor: pointer;
+    background-color: var(--primary-two-color);
+    color: white;
+    border-radius: 14px;
+    height: 2.5rem;
+    width: 5rem;
 }
 
 #closePopup:hover {
     background-color: #555555;
 }
 
+.projects_Box {
+    width: 100%;
+    height: 58.5rem;
+    background-color: var(--primary-two-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
 .projects_Box h2 {
     position: relative;
     top: -140px;
+
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-one-color);
 }
 
 .gallery_Box h2 {
@@ -250,17 +339,28 @@ html {
     margin: auto;
     top: 120px;
     text-align: center;
+
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-two-color);
 }
 
 .gallery_Pictures {
     max-width: 1980px;
     margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 17.5rem;
 }
 
 .gallery_Pic img {
     height: 200px;
     width: 300px;
-    border-radius: 20px;
+    border-radius: 14px;
     object-fit: cover;
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     filter: grayscale(60%);
@@ -269,4 +369,58 @@ html {
 .gallery_Pic img:hover{
     transform: scale(1.05);
     filter: grayscale(0%);
+}
+
+.contact_Me_Box {
+    margin: auto;
+    width: 100%;
+    max-width: 1980px;
+    height: 540px;
+    background-color: var(--primary-two-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--primary-one-color);
+    gap: 40px;
+}
+
+.contact_Me_Text {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 40px;
+    color: var(--primary-one-color)
+}
+
+.contact_Me_Text h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--primary-one-color);
+}
+
+.contact_Me_Text p {
+    font-size: 1.5rem;
+}
+
+.contact_Me_Box div {
+    width: 30%;
+    height: 70%;
+}
+
+.contact_Me_Box h3 {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 28px;
+    color: var(--primary-one-color);
+}
+
+.contact_Me_Box p {
+    font-size: 20px;
+}
+
+.contact_Me_Box i {
+    font-size: 36px;
 }
