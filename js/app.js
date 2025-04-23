@@ -156,3 +156,24 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
+const dropdownButton = document.querySelector(".drop_Down button");
+    const dropdownContent = document.querySelector(".drop_Down_Content");
+    const dropdownLinks = document.querySelectorAll(".drop_Down_Content a");
+
+    // Toggle the dropdown menu when the button is clicked
+    dropdownButton.addEventListener("click", () => {
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none"; // Hide the menu
+        } else {
+            dropdownContent.style.display = "block"; // Show the menu
+        }
+    });
+
+    // Close the dropdown menu when a link is clicked
+    dropdownLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            dropdownContent.style.display = "none"; // Hide the menu
+        });
+    });

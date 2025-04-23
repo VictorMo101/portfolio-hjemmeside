@@ -499,10 +499,10 @@ html {
     .drop_Down {
         display:contents;
     }
-
+/* 
     .drop_Down:hover .drop_Down_Content  {
         display:block;
-    }
+    } */
 
     .drop_Down button {
         color: var(--primary-two-color);
@@ -513,6 +513,7 @@ html {
     }
 
     .drop_Down_Content{
+        margin-top: 39px;
         display: block;
         background-color: var(--primary-one-color);
         box-shadow: 2px 2px 5px black;
@@ -525,20 +526,17 @@ html {
 
     .drop_Down_Content a {
         font-size: 1.5rem;
+        color: var(--primary-two-color);
+        padding: 2px;
     }
 
     .navigation_Bar {
         height: 10vw;
         position: fixed;
     }
-    .navigation_Bar ul {
-        gap: 3vw;
-    }
-    .navigation_Bar ul li a {
-        font-size: 3vw;
-    }
+
     .linkedInLink {
-        font-size: 5vw;
+        display:none;
     }
 
 
