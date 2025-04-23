@@ -266,6 +266,7 @@ html {
     opacity: 0;
 }
 
+
 .project img {
     border-radius: 14px;
 }
@@ -595,5 +596,15 @@ html {
     .contact_Me_Box div {
         border: none;
         width: 100%;
+    }
+
+    #galleryPics {
+        opacity: 1;
+    }
+    #projectPics {
+        opacity: 1;
+    }
+    #experienceList {
+        opacity: 1;
     }
 }
