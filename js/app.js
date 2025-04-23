@@ -108,7 +108,7 @@ setInterval(() => {
    
 // used for when media query > 480px
 if (animatedText) {
-    const mediaQuery = window.matchMedia("(max-width: 480px)");
+    const mediaQuery = window.matchMedia("(max-width: 600px)");
 
     function handleAnimation() {
         const translateXValue = mediaQuery.matches ? ["70%", "0%"] : ["70%", "-50%"];
