@@ -136,7 +136,7 @@ html {
 .about_Me_Box {
     margin: auto; 
     width: 100%; 
-    height: 74rem;
+    height: 82rem;
     background-color: var(--primary-two-color);
 
     margin-top: -0.25rem;
@@ -486,9 +486,46 @@ html {
     font-size: 36px;
 }
 
+.drop_Down {
+    display: none;
+}
 
 @media (max-width: 770px) {
 
+    .nav_Bar_Desk {
+        display: none !important;
+    }
+
+    .drop_Down {
+        display:contents;
+    }
+
+    .drop_Down:hover .drop_Down_Content  {
+        display:block;
+    }
+
+    .drop_Down button {
+        color: var(--primary-two-color);
+        grid-column: 1;
+        grid-row: 1;
+        position: absolute;
+        padding: 0.5rem 1rem;
+    }
+
+    .drop_Down_Content{
+        display: block;
+        background-color: var(--primary-one-color);
+        box-shadow: 2px 2px 5px black;
+        width: 8.5rem;
+    }
+
+    .drop_Down .drop_Down_Content {
+        display:none;
+    }
+
+    .drop_Down_Content a {
+        font-size: 1.5rem;
+    }
 
     .navigation_Bar {
         height: 10vw;
@@ -501,7 +538,7 @@ html {
         font-size: 3vw;
     }
     .linkedInLink {
-        font-size: 3vw;
+        font-size: 5vw;
     }
 
 
@@ -623,7 +660,9 @@ html {
         transform: scale(2);
     }
 
-
+    .experience_Box ul li:hover {
+        transform: scale(2);
+    }
 
 
 
@@ -640,17 +679,16 @@ html {
     .popupBox_Box p {
         margin: 1rem;
         color: var(--primary-two-color);
-        width: 100%;
+
     }
 
     .popupBox_Box h3 {
         margin: 1rem;
         color: var(--primary-two-color);
-        width: 100%;
     }
     
     .popupBox_Text_Button {
-        width: 30%;
+        width: 100%;
     }
     
     .popupBox_Images {
@@ -658,14 +696,14 @@ html {
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
-        margin: auto;
+        margin: 1rem auto auto auto;
     }
     
     .popupBox_Images img {
         margin: auto;
         position: relative;
-        height: 10rem;
-        width: 10rem;
+        height: 10.5rem;
+        width: 9rem;
         object-fit: cover;
         border-radius: 1rem;
     }
