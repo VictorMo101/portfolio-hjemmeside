@@ -267,6 +267,7 @@ html {
 }
 
 
+
 .project img {
     border-radius: 14px;
 }
@@ -356,6 +357,8 @@ html {
 #galleryPics {
     opacity: 0;
 }
+
+
 
 .gallery_Box h2 {
     position: relative;
@@ -536,6 +539,10 @@ html {
         height: 1080px;
     }
 
+    .experience_Box h2 {
+        top: 80px;
+    }
+
     .experience_Box ul {
         position: relative;
         top: 60px;
@@ -601,10 +608,16 @@ html {
     #galleryPics {
         opacity: 1;
     }
+    
     #projectPics {
         opacity: 1;
     }
+    
     #experienceList {
+        opacity: 1;
+    }
+
+    .text_Box {
         opacity: 1;
     }
 }

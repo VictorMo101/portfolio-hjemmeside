@@ -1,4 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const mediaQuery = window.matchMedia("(max-width: 770px)");
+
+    // Function to check if animations should run
+    function shouldRunAnimations() {
+        return !mediaQuery.matches; // Only run animations if screen width is greater than 770px
+    }
+
+    // Smooth scrolling logic (unchanged)
     const addSmoothScroll = (selector, targetId) => {
         const link = document.querySelector(selector);
         if (link) {
@@ -12,83 +20,39 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Apply smooth scrolling to links
     addSmoothScroll('a[href="#about_Me"]', "#about_Me");
     addSmoothScroll('a[href="#experience"]', "#experience");
     addSmoothScroll('a[href="#projects"]', "#projects");
     addSmoothScroll('a[href="#gallery"]', "#gallery");
     addSmoothScroll('a[href="#contactMe"]', "#contactMe");
     addSmoothScroll('a[href="#home"]', "#home");
-    
 
-
+    // Hero Blob Animation
     const heroBlob = document.getElementById("heroBlob");
-    if (heroBlob) {
-        // Create an Intersection Observer
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        // Trigger Anime.js animation
-                        anime({
-                            targets: "#heroBlob",
-                            opacity: [0, 1], // Fade in
-                            duration: 1500, // Animation duration in ms
-                            easing: "easeOutQuad", // Smooth easing
-                            complete: () => {
-                                // Explicitly set the final state
-                                document.getElementById("heroBlob").style.opacity = "1";
-                            },
-                        });
-
-                        // Stop observing after animation is triggered
-                        observer.unobserve(heroBlob);
-                    }
-                });
-            }
-        );
-
-        // Observe the target element
+    if (heroBlob && shouldRunAnimations()) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    anime({
+                        targets: "#heroBlob",
+                        opacity: [0, 1],
+                        duration: 1500,
+                        easing: "easeOutQuad",
+                        complete: () => {
+                            document.getElementById("heroBlob").style.opacity = "1";
+                        },
+                    });
+                    observer.unobserve(heroBlob);
+                }
+            });
+        });
         observer.observe(heroBlob);
     }
-});
 
-// Initialize the current index of the slide to 0
-let currentIndex = 0;
-
-// Function to display a specific slide based on the given index
-function showSlide(index) {
-    // Get the carousel element by its ID
-    const carousel = document.getElementById('carousel');
-    // Get the total number of slides in the carousel
-    const totalSlides = carousel.children.length;
-
-    // Wrap around the index if it goes out of bounds
-    currentIndex = (index + totalSlides) % totalSlides;
-
-    // Calculate the offset to move the carousel to the correct slide
-    const offset = -currentIndex * 100; // Each slide is assumed to take up 100% width
-    // Apply the calculated offset to the carousel's transform property
-    carousel.style.transform = `translateX(${offset}%)`;
-}
-
-// Function to move to the next slide
-function nextSlide() {
-    // Increment the current index and show the next slide
-    showSlide(currentIndex + 1);
-}
-
-// Optional: Automatically move to the next slide every 5 seconds
-setInterval(() => {
-    nextSlide();
-}, 5000);
-
-
-
-    // Animation for #animatedText
+    // Animated Text
     const animatedText = document.getElementById("animatedText");
-    if (animatedText) {
-        new IntersectionObserver(([entry], obs) => {
+    if (animatedText && shouldRunAnimations()) {
+        const observer = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 anime({
                     targets: "#animatedText",
@@ -99,54 +63,14 @@ setInterval(() => {
                 });
                 obs.unobserve(animatedText);
             }
-        }, { threshold: 0.5 }).observe(animatedText);
-    }
-
-
-
-
-   
-
-if (animatedText) {
-    const mediaQuery = window.matchMedia("(max-width: 770px)");
-
-    function handleAnimation() {
-        const translateXValue = mediaQuery.matches ? ["70%", "0%"] : ["70%", "-50%"];
-
-        // Create the IntersectionObserver
-        const observer = new IntersectionObserver(([entry], obs) => {
-            if (entry.isIntersecting) {
-                anime({
-                    targets: "#animatedText",
-                    opacity: [0, 1],
-                    translateX: translateXValue,
-                    duration: 800,
-                    easing: "easeInQuad",
-                });
-                obs.unobserve(animatedText); // Stop observing after the animation
-            }
         }, { threshold: 0.5 });
-
         observer.observe(animatedText);
     }
 
-    // Call the function initially to apply the correct animation
-    handleAnimation();
-
-    // Add a listener to handle screen size changes dynamically
-    mediaQuery.addEventListener("change", () => {
-        // Reapply the animation logic when the screen size changes
-        handleAnimation();
-    });
-}
-
-
-
-
-
+    // Experience List Animation
     const experienceList = document.getElementById("experienceList");
-    if (experienceList) {
-        new IntersectionObserver(([entry], obs) => {
+    if (experienceList && shouldRunAnimations()) {
+        const observer = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 anime({
                     targets: "#experienceList",
@@ -157,58 +81,59 @@ if (animatedText) {
                 });
                 obs.unobserve(experienceList);
             }
-        }, { threshold: 0.5 }).observe(experienceList);
+        }, { threshold: 0.5 });
+        observer.observe(experienceList);
     }
 
-    
-        const popupBox = document.getElementById("popupBox");
-        const ProjectLink = document.querySelector(".project a");
-        const closePopup = document.getElementById("closePopup");
-    
-        // Show the popup box when the link is clicked
+    // Project Pics Animation
+    const projectPics = document.getElementById("projectPics");
+    if (projectPics && shouldRunAnimations()) {
+        const observer = new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: "#projectPics",
+                    opacity: [0, 1],
+                    translateY: ["30%", "0"],
+                    duration: 600,
+                    easing: "easeInQuad",
+                });
+                obs.unobserve(projectPics);
+            }
+        }, { threshold: 0.5 });
+        observer.observe(projectPics);
+    }
+
+    // Gallery Pics Animation
+    const galleryPics = document.getElementById("galleryPics");
+    if (galleryPics && shouldRunAnimations()) {
+        const observer = new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: "#galleryPics",
+                    opacity: [0, 1],
+                    translateY: ["30%", "0"],
+                    duration: 600,
+                    easing: "easeInQuad",
+                });
+                obs.unobserve(galleryPics);
+            }
+        }, { threshold: 0.5 });
+        observer.observe(galleryPics);
+    }
+
+    // Popup Box Logic (unchanged)
+    const popupBox = document.getElementById("popupBox");
+    const ProjectLink = document.querySelector(".project a");
+    const closePopup = document.getElementById("closePopup");
+
+    if (popupBox && ProjectLink && closePopup) {
         ProjectLink.addEventListener("click", (e) => {
-            e.preventDefault(); // Prevent the default link behavior
-            popupBox.classList.remove("popupboxhidden"); // Show the popup box
+            e.preventDefault();
+            popupBox.classList.remove("popupboxhidden");
         });
-    
-        // Hide the popup box when the close button is clicked
+
         closePopup.addEventListener("click", () => {
-            popupBox.classList.add("popupboxhidden"); // Hide the popup box
+            popupBox.classList.add("popupboxhidden");
         });
-
-
-
-
-        const projectPics = document.getElementById("projectPics");
-        if (projectPics) {
-            new IntersectionObserver(([entry], obs) => {
-                if (entry.isIntersecting) {
-                    anime({
-                        targets: "#projectPics",
-                        opacity: [0, 1],
-                        translateY: ["30%", "0"],
-                        duration: 600,
-                        easing: "easeInQuad",
-                    });
-                    obs.unobserve(projectPics);
-                }
-            }, { threshold: 0.5 }).observe(projectPics);
-        }
-
-
-
-        const galleryPics = document.getElementById("galleryPics");
-        if (galleryPics) {
-            new IntersectionObserver(([entry], obs) => {
-                if (entry.isIntersecting) {
-                    anime({
-                        targets: "#galleryPics",
-                        opacity: [0, 1],
-                        translateY: ["30%", "0"],
-                        duration: 600,
-                        easing: "easeInQuad",
-                    });
-                    obs.unobserve(galleryPics);
-                }
-            }, { threshold: 0.5 }).observe(galleryPics);
-        }
+    }
+});
