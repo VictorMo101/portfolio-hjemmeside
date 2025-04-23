@@ -106,14 +106,14 @@ setInterval(() => {
 
 
    
-// used for when media query > 480px
+
 if (animatedText) {
     const mediaQuery = window.matchMedia("(max-width: 770px)");
 
     function handleAnimation() {
         const translateXValue = mediaQuery.matches ? ["70%", "0%"] : ["70%", "-50%"];
 
-        // Create the IntersectionObserver only once
+        // Create the IntersectionObserver
         const observer = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 anime({
@@ -134,7 +134,10 @@ if (animatedText) {
     handleAnimation();
 
     // Add a listener to handle screen size changes dynamically
-    mediaQuery.addEventListener("change", handleAnimation);
+    mediaQuery.addEventListener("change", () => {
+        // Reapply the animation logic when the screen size changes
+        handleAnimation();
+    });
 }
 
 
