@@ -205,7 +205,8 @@ html {
 
 .video_Section video {
     border-radius: 14px;
-    width: 48rem;
+    width: 42rem;
+    margin-left: 6em;
     border: 6px solid var(--primary-one-color);
     transition: transform 0.3s ease-in-out;
 }
