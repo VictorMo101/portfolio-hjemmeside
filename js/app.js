@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 anime({
                     targets: "#animatedText",
                     opacity: [0, 1],
-                    translateX: ["70%", "-50%"],
+                    translateX: ["0%", "-50%"],
                     duration: 800,
                     easing: "easeInQuad",
                 });
@@ -66,6 +66,25 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { threshold: 0.5 });
         observer.observe(animatedText);
     }
+
+    const videoSection = document.getElementById("videoSection");
+    if (videoSection && shouldRunAnimations()) {
+        const observer = new IntersectionObserver(([entry], obs) => {
+            if (entry.isIntersecting) {
+                anime({
+                    targets: "#videoSection",
+                    opacity: [0, 1],
+                    translateX: ["-50%", "0%"],
+                    duration: 600,
+                    easing: "easeInQuad",
+                });
+                obs.unobserve(videoSection);
+            }
+        }, { threshold: 0.5 });
+        observer.observe(videoSection);
+    }
+
+
 
     // Experience List Animation
     const experienceList = document.getElementById("experienceList");

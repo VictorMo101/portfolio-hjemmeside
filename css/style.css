@@ -136,9 +136,9 @@ html {
 .about_Me_Box {
     margin: auto; 
     width: 100%; 
-
+    height: 74rem;
     background-color: var(--primary-two-color);
-    height: 56rem;
+
     margin-top: -0.25rem;
 }
 
@@ -190,6 +190,41 @@ html {
     padding: 1.5rem;
 }
 
+.video_Section {
+    grid-column: 1;
+    height: 24rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+#videoSection {
+    opacity: 0;
+}
+
+.video_Section video {
+    border-radius: 14px;
+    width: 48rem;
+    border: 6px solid var(--primary-one-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.video_Section video:hover {
+    transform: scale(1.005);
+}
+
+.about_Me_Box_Box h3 {
+    margin: auto;
+    grid-column: 2;
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary-one-color);
+}
+
+.VideoTextPhone {
+    opacity: 0;
+}
 
 .experience_Box {
     max-width: 1200px;
@@ -496,7 +531,7 @@ html {
     }
 
     .about_Me_Box {
-        height: 1080px;
+        height: auto;
     }
 
     .about_Me_Box_Box {
@@ -531,28 +566,61 @@ html {
 
     }
 
+    .video_Section {
+        grid-column: 1;
+        height: 24rem;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    #videoSection {
+        margin-top: -4rem;
+        opacity: 1;
+    }
+
+    .VideoTextPhone {
+        opacity: 1;
+    }
+
+    
+    .VideoTextDesk {
+        opacity: 0;
+    }
+
+    .about_Me_Box_Box h3 {
+        margin: auto;
+        font-size: 2rem;
+        grid-column: 1;
+    }
+
     .text_Box p {
         font-size: 1.2rem;
     }
 
     .experience_Box {
-        height: 1380px;
+        padding: 18rem 0 0 0;
+        height: auto;
     }
 
     .experience_Box h2 {
-        top: -40px;
+        top: -12rem;
     }
 
     .experience_Box ul {
-        position: relative;
-        top: 60px;
-        gap: 2.5rem;
-        font-size: 1.2rem;
+
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+        gap: 8rem; /* Add spacing between rows */
     }
 
     .experience_Box ul li {
-        width: 120px;
-        height: 120px;
+        
+
+        width: 160px;
+        height: 220px;
+        transform: scale(2);
     }
 
 
@@ -606,6 +674,10 @@ html {
 
 
 
+    .gallery_Box {
+        height: auto;
+        padding-bottom: 22rem;
+    }
 
     .gallery_Pic {
         position: relative;
@@ -613,9 +685,11 @@ html {
     }
 
     .gallery_Pic img {
-        height: 150px;
-        width: 150px;
+        height: 20rem;
+        width: 20rem;
         filter: grayscale(0%);
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
     }
     
     .gallery_Pic img:hover{
@@ -671,4 +745,6 @@ html {
     .text_Box {
         opacity: 1;
     }
+
+
 }
