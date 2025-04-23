@@ -569,7 +569,13 @@ html {
         flex-direction: column;
     }
     
-    .popupBox_Box p, h3 {
+    .popupBox_Box p {
+        margin: 1rem;
+        color: var(--primary-two-color);
+        width: 100%;
+    }
+
+    .popupBox_Box h3 {
         margin: 1rem;
         color: var(--primary-two-color);
         width: 100%;
@@ -580,7 +586,7 @@ html {
     }
     
     .popupBox_Images {
-        width: 70%;
+        width: auto;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
@@ -590,8 +596,8 @@ html {
     .popupBox_Images img {
         margin: auto;
         position: relative;
-        height: 30vw;
-        width: 30vw;
+        height: 10rem;
+        width: 10rem;
         object-fit: cover;
         border-radius: 1rem;
     }
