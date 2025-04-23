@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     addSmoothScroll('a[href="#contactMe"]', "#contactMe");
     addSmoothScroll('a[href="#home"]', "#home");
 
+    
+    
+    
     // Hero Blob Animation
     const heroBlob = document.getElementById("heroBlob");
     if (heroBlob && shouldRunAnimations()) {
@@ -48,6 +51,45 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         observer.observe(heroBlob);
     }
+
+
+
+
+
+
+ // Initialize the current index of the slide to 0
+ let currentIndex = 0;
+ 
+ // Function to display a specific slide based on the given index
+ function showSlide(index) {
+     // Get the carousel element by its ID
+     const carousel = document.getElementById('carousel');
+     // Get the total number of slides in the carousel
+     const totalSlides = carousel.children.length;
+ 
+     // Wrap around the index if it goes out of bounds
+     currentIndex = (index + totalSlides) % totalSlides;
+ 
+     // Calculate the offset to move the carousel to the correct slide
+     const offset = -currentIndex * 100; // Each slide is assumed to take up 100% width
+     // Apply the calculated offset to the carousel's transform property
+     carousel.style.transform = `translateX(${offset}%)`;
+ }
+ 
+ // Function to move to the next slide
+ function nextSlide() {
+     // Increment the current index and show the next slide
+     showSlide(currentIndex + 1);
+ }
+ 
+ // Optional: Automatically move to the next slide every 5 seconds
+ setInterval(() => {
+     nextSlide();
+ }, 3000);
+
+
+
+
 
     // Animated Text
     const animatedText = document.getElementById("animatedText");
