@@ -113,7 +113,8 @@ if (animatedText) {
     function handleAnimation() {
         const translateXValue = mediaQuery.matches ? ["70%", "0%"] : ["70%", "-50%"];
 
-        new IntersectionObserver(([entry], obs) => {
+        // Create the IntersectionObserver only once
+        const observer = new IntersectionObserver(([entry], obs) => {
             if (entry.isIntersecting) {
                 anime({
                     targets: "#animatedText",
@@ -122,12 +123,14 @@ if (animatedText) {
                     duration: 800,
                     easing: "easeInQuad",
                 });
-                obs.unobserve(animatedText);
+                obs.unobserve(animatedText); // Stop observing after the animation
             }
-        }, { threshold: 0.5 }).observe(animatedText);
+        }, { threshold: 0.5 });
+
+        observer.observe(animatedText);
     }
 
-    // Call the function initially
+    // Call the function initially to apply the correct animation
     handleAnimation();
 
     // Add a listener to handle screen size changes dynamically
